@@ -212,6 +212,12 @@ Sometimes you have to implement a multicolumn table inside a table with only one
 
 Do not use colspan on tables, it does not work on some email clients - it can also crash your table layout.
 
+Leaving a href empty (href="#") on the button attribute will break the build. Always add a link behind it:
+
+```
+<x-button href="http://www.gooogle.com">Ut enim ad minim veniam</x-button>
+```
+
 Each time you need to add an image, you will need to use the <x-image/> tag to do so. You can add all the different attributes (width, imgUrl, href, etc) inside that tag:
 
 ```html
@@ -238,11 +244,6 @@ Each time you need to add an image, you will need to use the <x-image/> tag to d
         },
   }
   ```
-* On some email clients, the spacing between paragraphs does not work correctly. To deal with this issue you can use example below as a separator:
-
-```html
-<p style="text-[12px]">&nbsp;</p>
-```
 
 * We defined a special tailwind class to deal with positioning table content:
 
